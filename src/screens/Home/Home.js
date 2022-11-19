@@ -1,10 +1,13 @@
-import {View, Text, TextInput, Image} from 'react-native';
+import { View, Text, TextInput, Image } from "react-native";
 
-const Home = () => {
+const Home = ({ navigation, route }) => {
+  console.log("route : ", route);
+  const userName = route?.params?.userName;
   // const
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text> Home</Text>
+      <Text> {userName}</Text>
     </View>
   );
 };
